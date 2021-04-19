@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31129.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BezierConsole", "BezierConsole\BezierConsole.csproj", "{AF61D579-F377-4A78-AC67-FD7D3BE1B20C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{A0E58959-F3DE-4ABA-8555-2AE33DD050B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BezierTests", "BezierTests\BezierTests.csproj", "{8648FEC3-638B-45E5-B107-D90E2014B723}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bezier", "Bezier\Bezier.csproj", "{6B44F1A0-553A-4DB6-9E83-13040792259C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AF61D579-F377-4A78-AC67-FD7D3BE1B20C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF61D579-F377-4A78-AC67-FD7D3BE1B20C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF61D579-F377-4A78-AC67-FD7D3BE1B20C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF61D579-F377-4A78-AC67-FD7D3BE1B20C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8648FEC3-638B-45E5-B107-D90E2014B723}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8648FEC3-638B-45E5-B107-D90E2014B723}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8648FEC3-638B-45E5-B107-D90E2014B723}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8648FEC3-638B-45E5-B107-D90E2014B723}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B44F1A0-553A-4DB6-9E83-13040792259C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B44F1A0-553A-4DB6-9E83-13040792259C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B44F1A0-553A-4DB6-9E83-13040792259C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B44F1A0-553A-4DB6-9E83-13040792259C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8648FEC3-638B-45E5-B107-D90E2014B723} = {A0E58959-F3DE-4ABA-8555-2AE33DD050B4}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {40962567-EBE8-40CD-BFCD-3BB96162D725}
+	EndGlobalSection
+EndGlobal
