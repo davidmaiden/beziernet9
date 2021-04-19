@@ -35,13 +35,20 @@ namespace BezierConsole
                 Parser.Default.ParseArguments<CubicOptions, QuitOptions>(input).MapResult(
                 (CubicOptions opts) =>
                 {
-                    var controlPoints = opts.Points.ToArray();
-                    var cubicBezierCurve = CurveFactory.CreateCubicBezierCurve(controlPoints[0], controlPoints[1], controlPoints[2], controlPoints[3], opts.Intervals);
-
-                    cubicBezierCurve.Points.ToList().ForEach(p =>
+                    try
                     {
-                        Console.WriteLine($"X = {p.X}, Y = {p.Y}");
-                    });
+                        var controlPoints = opts.Points.ToArray();
+                        var cubicBezierCurve = CurveFactory.CreateCubicBezierCurve(controlPoints[0], controlPoints[1], controlPoints[2], controlPoints[3], opts.Intervals);
+
+                        cubicBezierCurve.Points.ToList().ForEach(p =>
+                        {
+                            Console.WriteLine($"X = {p.X}, Y = {p.Y}");
+                        });
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex.Message);
+                    }
 
                     return 0;
                 },
