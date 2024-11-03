@@ -1,10 +1,9 @@
 ﻿using Bezier.Interfaces;
 using System.Drawing;
 
-namespace Bezier
+namespace Bezier;
+
+public abstract class Curve : ICurve
 {
-    public abstract class Curve : ICurve
-    {
-        public Point[] Points { get; init; }
-    }
+    public Point[] Points { get; init; }
 }

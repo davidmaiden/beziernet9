@@ -1,9 +1,8 @@
 ﻿using System.Drawing;
 
-namespace Bezier.Interfaces
+namespace Bezier.Interfaces;
+
+interface IPolygonAnalyser
 {
-    interface IPolygonAnalyser
-    {
-        bool IsControlPolygon(Point[] points);
-    }
+    bool IsControlPolygon(Point[] points);
 }

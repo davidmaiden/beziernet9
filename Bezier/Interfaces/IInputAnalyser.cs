@@ -1,9 +1,8 @@
 ﻿using System.Drawing;
 
-namespace Bezier.Interfaces
+namespace Bezier.Interfaces;
+
+interface IInputAnalyser
 {
-    interface IInputAnalyser
-    {
-        bool IsValidInput(Point[] points, int intervals);
-    }
+    bool IsValidInput(Point[] points, int intervals);
 }

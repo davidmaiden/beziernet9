@@ -1,5 +1,4 @@
-﻿namespace Bezier.Interfaces
-{
-    interface IRule
-    { }
-}
+﻿namespace Bezier.Interfaces;
+
+interface IRule
+{ }

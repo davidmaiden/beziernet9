@@ -1,9 +1,8 @@
 ﻿using System.Drawing;
 
-namespace Bezier.Interfaces
+namespace Bezier.Interfaces;
+
+interface IControlPolygonRule : IRule
 {
-    interface IControlPolygonRule : IRule
-    {
-        bool Evaluate(Point[] points);
-    }
+    bool Evaluate(Point[] points);
 }

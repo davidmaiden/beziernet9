@@ -3,20 +3,19 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 
-namespace Bezier
+namespace Bezier;
+
+class InputAnalyser : IInputAnalyser
 {
-    class InputAnalyser : IInputAnalyser
+    private readonly List<IInputRule> _rules;
+
+    public InputAnalyser(IRuleCollection<IInputRule> rules)
     {
-        private readonly List<IInputRule> _rules;
+        _rules = new List<IInputRule>(rules.Rules);
+    }
 
-        public InputAnalyser(IRuleCollection<IInputRule> rules)
-        {
-            _rules = new List<IInputRule>(rules.Rules);
-        }
-
-        public bool IsValidInput(Point[] points, int intervals)
-        {
-            return _rules.All(rule => rule.Evaluate(points, intervals));
-        }
+    public bool IsValidInput(Point[] points, int intervals)
+    {
+        return _rules.All(rule => rule.Evaluate(points, intervals));
     }
 }

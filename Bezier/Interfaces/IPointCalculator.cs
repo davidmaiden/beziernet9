@@ -1,9 +1,8 @@
 ﻿using System.Drawing;
 
-namespace Bezier.Interfaces
+namespace Bezier.Interfaces;
+
+interface IPointCalculator
 {
-    interface IPointCalculator
-    {
-        Point Calculate(Point[] points, float t);
-    }
+    Point Calculate(Point[] points, float t);
 }

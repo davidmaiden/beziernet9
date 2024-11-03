@@ -1,10 +1,9 @@
 ﻿using Bezier.Interfaces;
 using System.Drawing;
 
-namespace Bezier.Rules
+namespace Bezier.Rules;
+
+class IsNotNullRule : IControlPolygonRule
 {
-    class IsNotNullRule : IControlPolygonRule
-    {
-        public bool Evaluate(Point[] points) => points is not null;
-    }
+    public bool Evaluate(Point[] points) => points is not null;
 }

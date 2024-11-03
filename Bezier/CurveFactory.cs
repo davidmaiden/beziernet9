@@ -2,38 +2,37 @@
 using Bezier.Rules;
 using System.Drawing;
 
-namespace Bezier
+namespace Bezier;
+
+public static class CurveFactory
 {
-    public static class CurveFactory
+    public static ICurve CreateCubicBezierCurve(Point p0, Point p1, Point p2, Point p3, int intervals)
     {
-        public static ICurve CreateCubicBezierCurve(Point p0, Point p1, Point p2, Point p3, int intervals)
-        {
-            return new CubicBezierCurve(new Point[] { p0, p1, p2, p3 }, intervals, CreateCubicBezierPointCalculator(), CreatePolygonAnalyser(), CreateCubicBezierInputAnalyser());
-        }
+        return new CubicBezierCurve(new Point[] { p0, p1, p2, p3 }, intervals, CreateCubicBezierPointCalculator(), CreatePolygonAnalyser(), CreateCubicBezierInputAnalyser());
+    }
 
-        internal static IPolygonAnalyser CreatePolygonAnalyser()
-        {
-            return new PolygonAnalyser(CreateCubicBezierControlPolygonRules());
-        }
+    internal static IPolygonAnalyser CreatePolygonAnalyser()
+    {
+        return new PolygonAnalyser(CreateCubicBezierControlPolygonRules());
+    }
 
-        internal static IInputAnalyser CreateCubicBezierInputAnalyser()
-        {
-            return new InputAnalyser(CreateCubicBezierInputValidationRules());
-        }
+    internal static IInputAnalyser CreateCubicBezierInputAnalyser()
+    {
+        return new InputAnalyser(CreateCubicBezierInputValidationRules());
+    }
 
-        internal static IRuleCollection<IControlPolygonRule> CreateCubicBezierControlPolygonRules()
-        {
-            return new CubicBezierControlPolygonRules();
-        }
+    internal static IRuleCollection<IControlPolygonRule> CreateCubicBezierControlPolygonRules()
+    {
+        return new CubicBezierControlPolygonRules();
+    }
 
-        internal static IRuleCollection<IInputRule> CreateCubicBezierInputValidationRules()
-        {
-            return new CubicBezierInputValidationRules();
-        }
+    internal static IRuleCollection<IInputRule> CreateCubicBezierInputValidationRules()
+    {
+        return new CubicBezierInputValidationRules();
+    }
 
-        internal static IPointCalculator CreateCubicBezierPointCalculator()
-        {
-            return new CubicBezierPointCalculator();
-        }
+    internal static IPointCalculator CreateCubicBezierPointCalculator()
+    {
+        return new CubicBezierPointCalculator();
     }
 }

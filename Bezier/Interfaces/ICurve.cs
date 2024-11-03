@@ -2,10 +2,9 @@
 using System.Runtime.CompilerServices;
 
 [assembly: InternalsVisibleTo("BezierTests")]
-namespace Bezier.Interfaces
+namespace Bezier.Interfaces;
+
+public interface ICurve
 {
-    public interface ICurve
-    {
-        Point[] Points { get; }
-    }
+    Point[] Points { get; }
 }

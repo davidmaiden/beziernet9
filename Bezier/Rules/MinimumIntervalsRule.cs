@@ -1,10 +1,9 @@
 ﻿using Bezier.Interfaces;
 using System.Drawing;
 
-namespace Bezier.Rules
+namespace Bezier.Rules;
+
+class MinimumIntervalsRule : IInputRule
 {
-    class MinimumIntervalsRule : IInputRule
-    {
-        public bool Evaluate(Point[] points, int intervals) => intervals >= points?.Length;
-    }
+    public bool Evaluate(Point[] points, int intervals) => intervals >= points?.Length;
 }

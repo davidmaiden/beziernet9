@@ -1,21 +1,20 @@
 ﻿using Bezier.Interfaces;
 using System.Collections.Generic;
 
-namespace Bezier.Rules
+namespace Bezier.Rules;
+
+class CubicBezierControlPolygonRules : IRuleCollection<IControlPolygonRule>
 {
-    class CubicBezierControlPolygonRules : IRuleCollection<IControlPolygonRule>
+    private readonly ICollection<IControlPolygonRule> _rules;
+
+    internal CubicBezierControlPolygonRules()
     {
-        private readonly ICollection<IControlPolygonRule> _rules;
-
-        internal CubicBezierControlPolygonRules()
+        _rules = new List<IControlPolygonRule>
         {
-            _rules = new List<IControlPolygonRule>
-            {
-                new IsNotNullRule(),
-                new FourUniquePointsRule()
-            };
-        }
-
-        public ICollection<IControlPolygonRule> Rules => _rules;
+            new IsNotNullRule(),
+            new FourUniquePointsRule()
+        };
     }
+
+    public ICollection<IControlPolygonRule> Rules => _rules;
 }
