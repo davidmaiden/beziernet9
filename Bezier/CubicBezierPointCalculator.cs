@@ -1,5 +1,4 @@
 ﻿using Bezier.Interfaces;
-using System;
 using System.Drawing;
 
 namespace Bezier;

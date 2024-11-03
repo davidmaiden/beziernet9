@@ -5,5 +5,5 @@ namespace Bezier;
 
 public abstract class Curve : ICurve
 {
-    public Point[] Points { get; init; }
+    public Point[] Points { get; set; } = Array.Empty<Point>();
 }

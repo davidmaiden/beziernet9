@@ -8,7 +8,11 @@ public static class CurveFactory
 {
     public static ICurve CreateCubicBezierCurve(Point p0, Point p1, Point p2, Point p3, int intervals)
     {
-        return new CubicBezierCurve(new Point[] { p0, p1, p2, p3 }, intervals, CreateCubicBezierPointCalculator(), CreatePolygonAnalyser(), CreateCubicBezierInputAnalyser());
+        return new CubicBezierCurve([p0, p1, p2, p3],
+                                    intervals,
+                                    CreateCubicBezierPointCalculator(),
+                                    CreatePolygonAnalyser(),
+                                    CreateCubicBezierInputAnalyser());
     }
 
     internal static IPolygonAnalyser CreatePolygonAnalyser()

@@ -1,11 +1,4 @@
 ﻿using BenchmarkDotNet.Running;
+using Benchmarks;
 
-namespace Benchmarks;
-
-internal class Program
-{
-    static void Main(string[] args)
-    {
-        BenchmarkRunner.Run<Analyser>();
-    }
-}
+BenchmarkRunner.Run<Analyser>();
